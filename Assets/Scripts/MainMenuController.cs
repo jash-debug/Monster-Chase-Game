@@ -5,17 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    private Canvas howToPlayCanvas;
 
     public void Playgame()
     {
@@ -25,4 +16,15 @@ public class MainMenuController : MonoBehaviour
         
         SceneManager.LoadScene("MonsterChase");
     }
+
+    public void HowToPlay()
+    {
+        howToPlayCanvas.enabled = true;
+    }
+
+    public void MainMenu()
+    {
+        howToPlayCanvas.enabled = false;
+    }
+
 }
