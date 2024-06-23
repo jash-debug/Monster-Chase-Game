@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -22,16 +23,34 @@ public class PlayerController : MonoBehaviour
 
     private bool isOnGround = true;
     // Start is called before the first frame update
+    private PlayerControls inputs;
 
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         rd = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        inputs = new PlayerControls();
     }
     void Start()
     {
-        
+        inputs.Player.Enable();
+        inputs.Player.Jump.performed += Jump_performed;
+    }
+
+    private void Jump_performed(InputAction.CallbackContext context)
+    {
+        if (context.performed && isOnGround)
+        {
+            rd.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            anim.SetBool(jumpAnimation, true);
+            isOnGround = false;
+        }
+    }
+
+    private void OnDisable()
+    {
+        inputs.Player.Disable();
     }
 
     // Update is called once per frame
@@ -48,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
     void PlayerMoveKeyboard()
     {
-        moveX = Input.GetAxisRaw("Horizontal");
+        moveX = inputs.Player.Move.ReadValue<Vector2>().x;
 
         Vector2 pos = transform.position;
         pos.x += moveX * moveForce * Time.deltaTime;
@@ -77,12 +96,12 @@ public class PlayerController : MonoBehaviour
 
     void PlayerJump()
     {
-        if (Input.GetButtonDown(jump) && isOnGround)
+        /*if (Input.GetButtonDown(jump) && isOnGround)
         {
             rd.AddForce(new Vector2(0f, jumpForce) , ForceMode2D.Impulse);
             anim.SetBool(jumpAnimation, true);
             isOnGround = false;
-        }
+        }*/
 
     }
 
