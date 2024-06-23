@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
 
     private string walkAnimation = "walk";
+    private string jumpAnimation = "Jump";
     private string jump = "Jump";
     private string Ground_Tag = "Ground";
     private string Enemy = "Enemy";
@@ -79,6 +80,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown(jump) && isOnGround)
         {
             rd.AddForce(new Vector2(0f, jumpForce) , ForceMode2D.Impulse);
+            anim.SetBool(jumpAnimation, true);
             isOnGround = false;
         }
 
@@ -88,6 +90,8 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(Ground_Tag))
         {
+            anim.SetBool(jumpAnimation, false);
+
             isOnGround = true;
         }
 
