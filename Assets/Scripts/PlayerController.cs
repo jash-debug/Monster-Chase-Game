@@ -7,12 +7,18 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveForce =10f;
-    public float jumpForce = 11f;
+    [SerializeField] private float _jumpForce;
     public float moveX;
 
-    public SpriteRenderer sr;
-    public Rigidbody2D rd;
-    public Animator anim;
+    [SerializeField] private float gravityScale = 5;
+    [SerializeField] private float fallGravityScale = 15f;
+    [SerializeField] private float jumpHeight = 5;
+    private bool Jumped { get; set; }
+
+
+    private SpriteRenderer sr;
+    private Rigidbody2D rb;
+    private Animator anim;
 
     private string walkAnimation = "walk";
     private string jumpAnimation = "Jump";
@@ -28,29 +34,14 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
-        rd = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         inputs = new PlayerControls();
     }
     void Start()
     {
         inputs.Player.Enable();
-        inputs.Player.Jump.performed += Jump_performed;
-    }
-
-    private void Jump_performed(InputAction.CallbackContext context)
-    {
-        if (context.performed && isOnGround)
-        {
-            rd.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            anim.SetBool(jumpAnimation, true);
-            isOnGround = false;
-        }
-    }
-
-    private void OnDisable()
-    {
-        inputs.Player.Disable();
+        inputs.Player.Jump.performed += (context) => Jumped = context.ReadValueAsButton();
     }
 
     // Update is called once per frame
@@ -58,20 +49,23 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMoveKeyboard();
         PlayerAnimation();
+        ApplyGravity();
     }
 
     private void FixedUpdate()
     {
-        PlayerJump();
+        Jump_performed();
     }
 
     void PlayerMoveKeyboard()
     {
         moveX = inputs.Player.Move.ReadValue<Vector2>().x;
 
-        Vector2 pos = transform.position;
+        /*Vector2 pos = transform.position;
         pos.x += moveX * moveForce * Time.deltaTime;
-        transform.position = pos;
+        transform.position = pos;*/
+        Vector2 moveVector = new Vector2(moveX * moveForce, rb.velocity.y);
+        rb.velocity = moveVector;
 
     }
 
@@ -94,15 +88,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void PlayerJump()
+    void ApplyGravity()
     {
-        /*if (Input.GetButtonDown(jump) && isOnGround)
+        if (rb.velocity.y < 0)
         {
-            rd.AddForce(new Vector2(0f, jumpForce) , ForceMode2D.Impulse);
+            rb.gravityScale = fallGravityScale;
+        }
+
+    }
+    private void Jump_performed()
+    {
+        if (isOnGround && Jumped)
+        {
+            _jumpForce = Mathf.Sqrt(jumpHeight * (Physics2D.gravity.y * rb.gravityScale) * -2) * rb.mass;
+            rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+            rb.gravityScale = gravityScale;
             anim.SetBool(jumpAnimation, true);
             isOnGround = false;
-        }*/
-
+            Jumped = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -127,5 +131,10 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnDisable()
+    {
+        inputs.Player.Disable();
     }
 }

@@ -148,8 +148,8 @@
                 },
                 {
                     "name": "",
-                    "id": "f58c3b8a-c6a8-4278-8978-3e3287f02459",
-                    "path": "<Keyboard>/space",
+                    "id": "404643d5-9aae-4061-88b2-6f0d42a437a1",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -159,8 +159,8 @@
                 },
                 {
                     "name": "",
-                    "id": "404643d5-9aae-4061-88b2-6f0d42a437a1",
-                    "path": "<Gamepad>/buttonSouth",
+                    "id": "f58c3b8a-c6a8-4278-8978-3e3287f02459",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

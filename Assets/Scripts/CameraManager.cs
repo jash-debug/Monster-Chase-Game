@@ -13,11 +13,16 @@ public class CameraManager : MonoBehaviour
 
     void InstantiateVirtualCamera()
     {
-        if (virtualCameraPrefab != null)
+        if (virtualCameraPrefab == null)
         {
             currentVirtualCamera = Instantiate(virtualCameraPrefab, Vector3.zero, Quaternion.identity);
-            ConfigureVirtualCamera(currentVirtualCamera.GetComponent<CinemachineVirtualCamera>());
         }
+        else
+        {
+            currentVirtualCamera = virtualCameraPrefab;
+        }
+        ConfigureVirtualCamera(currentVirtualCamera.GetComponent<CinemachineVirtualCamera>());
+
     }
 
     void ConfigureVirtualCamera(CinemachineVirtualCamera virtualCamera)
@@ -29,7 +34,6 @@ public class CameraManager : MonoBehaviour
             if (player != null)
             {
                 virtualCamera.Follow = player.transform;
-                virtualCamera.LookAt = player.transform;
             }
 
             // Additional configuration, if needed
