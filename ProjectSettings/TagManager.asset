@@ -17,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
+  - Player
   - 
   - 
   - 
@@ -54,4 +54,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 4186288197
+    locked: 0
+  - name: coins
+    uniqueID: 4269827541
     locked: 0
