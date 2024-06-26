@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 76c05fc112faf674d8650043d94d0eaf
+guid: a17831fe6ee2149409603ddd148f8ebf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,190 +149,337 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: avery standing
+      name: Collectables_0
       rect:
         serializedVersion: 2
-        x: 145
-        y: 528
-        width: 103
-        height: 481
+        x: 7
+        y: 588
+        width: 46
+        height: 111
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76b18bd7c3464bf4f8eaa80ba37f16c5
-      internalID: -846919938
+      spriteID: 4c55a4a194a4f574fb885373facba987
+      internalID: -1524000575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avery walking-a (1)_1
+      name: Collectables_1
       rect:
         serializedVersion: 2
-        x: 270
-        y: 534
-        width: 247
-        height: 469
+        x: 70
+        y: 588
+        width: 37
+        height: 111
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65cc09e8cabc6c749adde16d7b861d20
-      internalID: 879606960
+      spriteID: cc5ad779be5d0ea4094bdd67016846db
+      internalID: -1501094385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avery walking-a (1)_2
+      name: Collectables_2
       rect:
         serializedVersion: 2
-        x: 551
-        y: 536
-        width: 118
-        height: 469
+        x: 126
+        y: 588
+        width: 38
+        height: 110
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cde5d016624b92e4b850a163a830dec8
-      internalID: -1622697089
+      spriteID: 45e14653977f697449409148ceef85cf
+      internalID: 76782533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avery walking-a (1)_3
+      name: Collectables_3
       rect:
         serializedVersion: 2
-        x: 694
-        y: 535
-        width: 236
-        height: 463
+        x: 184
+        y: 589
+        width: 38
+        height: 109
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5723ddc1474201c4cae992ab155b47bc
-      internalID: -26774440
+      spriteID: b8f976c903c136f4abc906e31e198e08
+      internalID: -1438984300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avery walking-a (1)_4
-      rect:
-        serializedVersion: 2
-        x: 934
-        y: 534
-        width: 115
-        height: 470
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ad035df5ad6942499c67036a80468c5
-      internalID: 1508552799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: avery walking-a (1)_5
+      name: Collectables_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 42
-        width: 305
-        height: 434
+        y: 506
+        width: 53
+        height: 54
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cc858fea0c7f3c4084fd53a89344397
-      internalID: 2120338754
+      spriteID: d082ddb301ab1fa489d1a4ebf4e0e521
+      internalID: 1112025366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avery walking-a (1)_6
+      name: Collectables_5
       rect:
         serializedVersion: 2
-        x: 318
-        y: 38
-        width: 341
-        height: 448
+        x: 64
+        y: 506
+        width: 58
+        height: 56
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb4edcf056398247aa91038fd058285
-      internalID: 1444097973
+      spriteID: 2ffe0f5d9ab32fe49adcf0da2765a753
+      internalID: -2035868764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avery walking-a (1)_7
+      name: Collectables_6
       rect:
         serializedVersion: 2
-        x: 672
-        y: 69
-        width: 265
-        height: 411
+        x: 135
+        y: 491
+        width: 91
+        height: 91
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20aef05a9c9d3e248af372550995e0ab
-      internalID: -1041159421
+      spriteID: e94063876a89fa64bb48ec26d4a0056f
+      internalID: 1227204370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avery walking-a (1)_8
+      name: Collectables_7
       rect:
         serializedVersion: 2
-        x: 939
+        x: 15
+        y: 355
+        width: 100
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6795cbe04517a2140815cc023fa30d5c
+      internalID: -1963502007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collectables_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 355
+        width: 99
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12736d1fb0793844987cf79571b8fd3
+      internalID: 1097914508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collectables_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 230
+        width: 98
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97effadf511998644bb400d637814b40
+      internalID: 255467527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collectables_10
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 229
+        width: 101
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e094081f38e0bf44a975226d3d962d5
+      internalID: -2042259917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collectables_11
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 118
+        width: 108
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51dc49494deeb494a8485543fd99eeb2
+      internalID: -813365168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collectables_12
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 118
+        width: 108
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b7fe9241239dc418389e1b72815eea
+      internalID: 32528893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collectables_13
+      rect:
+        serializedVersion: 2
+        x: 35
         y: 0
-        width: 235
-        height: 463
+        width: 54
+        height: 111
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c4794f09bc50e84e9078e8a78010995
-      internalID: -559168170
+      spriteID: de9b321003b3b684f98577c6b781474f
+      internalID: -1288070583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collectables_14
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 53
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4c7d1153712b34d8782ea33fd2059c
+      internalID: -166058963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collectables_15
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 0
+        width: 54
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312a4d124cb9c384d9c9d1e9013a6af1
+      internalID: 649214866
       vertices: []
       indices: 
       edges: []
@@ -348,15 +495,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      avery standing: -846919938
-      avery walking-a (1)_1: 879606960
-      avery walking-a (1)_2: -1622697089
-      avery walking-a (1)_3: -26774440
-      avery walking-a (1)_4: 1508552799
-      avery walking-a (1)_5: 2120338754
-      avery walking-a (1)_6: 1444097973
-      avery walking-a (1)_7: -1041159421
-      avery walking-a (1)_8: -559168170
+      Collectables_0: -1524000575
+      Collectables_1: -1501094385
+      Collectables_10: -2042259917
+      Collectables_11: -813365168
+      Collectables_12: 32528893
+      Collectables_13: -1288070583
+      Collectables_14: -166058963
+      Collectables_15: 649214866
+      Collectables_2: 76782533
+      Collectables_3: -1438984300
+      Collectables_4: 1112025366
+      Collectables_5: -2035868764
+      Collectables_6: 1227204370
+      Collectables_7: -1963502007
+      Collectables_8: 1097914508
+      Collectables_9: 255467527
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
