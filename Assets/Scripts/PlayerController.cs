@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
     private string Ground_Tag = "Ground";
     private string Enemy = "Enemy";
 
+    public CoinManager coinManager;
+    private PowerupManager powerup;
+
 
     private bool isOnGround = true;
     // Start is called before the first frame update
@@ -36,7 +39,18 @@ public class PlayerController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        powerup = GetComponent<PowerupManager>();
         inputs = new PlayerControls();
+        if (coinManager == null)
+        {
+            coinManager = GameObject.FindGameObjectWithTag("ExpendablesManager").GetComponent<CoinManager>();
+            if (coinManager == null)
+            {
+                GameObject expendablesManager = new GameObject();
+                expendablesManager.AddComponent<CoinManager>();
+                expendablesManager.AddComponent<PowerupManager>();
+            }
+        }
     }
     void Start()
     {
@@ -127,9 +141,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(Enemy))
+        if (collision.CompareTag(Enemy) && powerup.Indestructible == false)
         {
             Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+            Destroy(collision.gameObject);
+            coinManager.coinCount++;
         }
     }
 

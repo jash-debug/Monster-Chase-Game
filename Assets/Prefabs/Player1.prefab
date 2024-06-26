@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3714832724923995317}
   - component: {fileID: 201757649173059475}
   - component: {fileID: 5857511264287376237}
+  - component: {fileID: 1864589508566141796}
   - component: {fileID: 8401097714506174710}
   - component: {fileID: -8062839319332644936}
   m_Layer: 0
@@ -155,6 +156,19 @@ MonoBehaviour:
   gravityScale: 5
   fallGravityScale: 10
   jumpHeight: 3.5
+  coinManager: {fileID: 0}
+--- !u!114 &1864589508566141796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278306072188906849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfee84d2072f7ba439f1e2bd062a2618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!70 &8401097714506174710
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
