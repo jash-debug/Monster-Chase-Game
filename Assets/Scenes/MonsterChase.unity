@@ -2270,7 +2270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 166965101}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'rightPos '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14973,7 +14973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1671345344}
   - component: {fileID: 1671345343}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpawnManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14993,11 +14993,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsters:
-  - {fileID: 5766823192805175168, guid: 038a45a1c3b303a4aaed66d1c93c928b, type: 3}
-  - {fileID: 3041646272424562243, guid: 40a820f98cd8c814a858782bcad0b540, type: 3}
   - {fileID: 5154644026890493878, guid: 4e7b16de359c0644f8c05496e2468e7a, type: 3}
+  - {fileID: 3041646272424562243, guid: 40a820f98cd8c814a858782bcad0b540, type: 3}
+  - {fileID: 5766823192805175168, guid: 038a45a1c3b303a4aaed66d1c93c928b, type: 3}
   leftPos: {fileID: 2052200561}
-  RightPos: {fileID: 166965101}
+  rightPos: {fileID: 166965101}
 --- !u!4 &1671345344
 Transform:
   m_ObjectHideFlags: 0
@@ -18438,7 +18438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2052200561}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: leftPos
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
