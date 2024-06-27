@@ -131,24 +131,23 @@ public class PlayerController : MonoBehaviour
 
             isOnGround = true;
         }
-
         if (collision.gameObject.CompareTag(Enemy))
         {
-            Destroy(gameObject);
+            if (!powerup.IsIndestructible())
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+            }
+            
         }
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(Enemy) && powerup.Indestructible == false)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Destroy(collision.gameObject);
-        }
+        
         if (collision.gameObject.CompareTag("Coin"))
         {
             Destroy(collision.gameObject);
