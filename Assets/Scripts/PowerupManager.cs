@@ -5,6 +5,21 @@ using UnityEngine;
 
 public class PowerupManager : MonoBehaviour
 {
-    public bool Indestructible { get; set; }
+    private bool indestructible;
+
+    public bool IsIndestructible()
+    {
+        return indestructible;
+    }
+
+    public void SetIndestructible(bool value)
+    {
+        indestructible = value;
+    }
+
+    private void Start()
+    {
+        indestructible = false;
+    }
 
 }

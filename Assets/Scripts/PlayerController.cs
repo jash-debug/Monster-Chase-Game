@@ -127,10 +127,17 @@ public class PlayerController : MonoBehaviour
             anim.SetBool(jumpAnimation, false);
             isOnGround = true;
         }
-
         if (collision.gameObject.CompareTag(Enemy))
         {
-            Destroy(gameObject);
+            if (!powerup.IsIndestructible())
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+            }
+            
         }
     }
 
