@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    private AudioSource playerAudio;
+    public AudioClip moneySound;
     public float moveForce = 10f;
     [SerializeField] private float _jumpForce;
     public float moveX;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        playerAudio = GetComponent<AudioSource>();
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -112,6 +114,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
             rb.gravityScale = gravityScale;
             anim.SetBool(jumpAnimation, true);
+            //playerAudio.PlayOneShot(moneySound, 1.0f);
             isOnGround = false;
             Jumped = false;
         }

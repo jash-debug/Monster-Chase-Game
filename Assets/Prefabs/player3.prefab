@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b924fe2903e7844a9088f8606758ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moneySound: {fileID: 8300000, guid: 0b4e7ae15331d794e9e13ac2f2d9a829, type: 3}
   moveForce: 10
   _jumpForce: 0
   moveX: 0
