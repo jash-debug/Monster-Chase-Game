@@ -10,9 +10,6 @@ public class MainMenuController : MonoBehaviour
 
     public void Playgame()
     {
-        int selected = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
-
-        GameManager.instance.CharIndex = selected;
         
         SceneManager.LoadScene("MonsterChase");
     }

@@ -17,7 +17,6 @@ public class CoinManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("CoinManager started");
         // Initial coin at the center
         SpawnCoin(Vector3.zero);
         StartCoroutine(SpawnCoins());
@@ -70,11 +69,8 @@ public class CoinManager : MonoBehaviour
 
     public void CollectCoin(GameObject coin)
     {
-        Debug.Log("CollectCoin called");
         coinCount++;
-        coinText.text = coinCount.ToString(); // Update the UI immediately
         coins.Remove(coin);
         Destroy(coin);
-        Debug.Log("Coin collected. Total coins: " + coinCount);
     }
 }
