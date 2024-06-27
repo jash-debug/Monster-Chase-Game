@@ -34,7 +34,15 @@ public class SpawnMonster : MonoBehaviour
 
             spawnedMonster = Instantiate(monsters[animalIndex]);
             Debug.Log("Spawned Monster: " + spawnedMonster.name);
-            spawnedMonster.transform.position = new Vector2(Random.Range(-126, 126), 54);
+
+            if (animalIndex == 2)
+            {
+                spawnedMonster.transform.position = new Vector2(Random.Range(-126, 126), -2);
+            }
+            else
+            {
+                spawnedMonster.transform.position = new Vector2(Random.Range(-126, 126), 54);
+            }
 
             if (spawnedMonster.transform.position.x < 0)
             {
