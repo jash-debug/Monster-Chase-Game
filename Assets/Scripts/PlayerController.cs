@@ -126,7 +126,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag(Enemy))
         {
-            if (!powerup.IsIndestructible())
+            if (!powerup.isIndestructible())
             {
                 Destroy(gameObject);
             }
@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(Enemy) && !powerup.Indestructible)
+        if (collision.CompareTag(Enemy) && !powerup.isIndestructible())
         {
             Destroy(gameObject);
         }

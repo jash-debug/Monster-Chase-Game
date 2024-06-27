@@ -7,14 +7,14 @@ public class PowerupManager : MonoBehaviour
 {
     private bool indestructible;
 
-    public bool IsIndestructible()
+    public void SetIndestructible (bool state)
     {
-        return indestructible;
+        indestructible = state;
     }
 
-    public void SetIndestructible(bool value)
+    public bool isIndestructible()
     {
-        indestructible = value;
+        return indestructible;
     }
 
     private void Start()
