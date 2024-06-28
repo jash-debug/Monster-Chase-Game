@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     private AudioSource playerAudio;
     public AudioClip moneySound;
+    public AudioClip coinSound;
     public float moveForce = 10f;
     [SerializeField] private float _jumpForce;
     public float moveX;
@@ -41,6 +42,8 @@ public class PlayerController : MonoBehaviour
         powerup = GetComponent<PowerupManager>();
         inputs = new PlayerControls();
 
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
         if (coinManager == null)
         {
             coinManager = GameObject.FindGameObjectWithTag("ExpendablesManager").GetComponent<CoinManager>();
@@ -64,14 +67,13 @@ public class PlayerController : MonoBehaviour
         PlayerMoveKeyboard();
         PlayerAnimation();
         ApplyGravity();
+        PlaySound();
     }
 
     private void FixedUpdate()
     {
         Jump_performed();
     }
-
-
 
     void PlayerMoveKeyboard()
     {
@@ -114,9 +116,19 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
             rb.gravityScale = gravityScale;
             anim.SetBool(jumpAnimation, true);
-            //playerAudio.PlayOneShot(moneySound, 1.0f);
             isOnGround = false;
             Jumped = false;
+
+            // Play jump sound
+            playerAudio.PlayOneShot(moneySound, 1.0f);
+        }
+    }
+
+    private void PlaySound()
+    {
+        if (isOnGround && Jumped)
+        {
+            playerAudio.PlayOneShot(moneySound, 1.0f);
         }
     }
 
@@ -137,7 +149,6 @@ public class PlayerController : MonoBehaviour
             {
                 Destroy(collision.gameObject);
             }
-            
         }
     }
 
@@ -154,6 +165,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Coin"))
         {
+            playerAudio.PlayOneShot(coinSound, 1.0f);
             Destroy(collision.gameObject);
             coinManager.coinCount++;
         }
