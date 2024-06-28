@@ -18,7 +18,7 @@ public class CoinManager : MonoBehaviour
     void Start()
     {
         // Initial coin at the center
-        SpawnCoin(Vector3.zero);
+        SpawnCoin(new Vector2(0,2));
         StartCoroutine(SpawnCoins());
     }
 
@@ -31,7 +31,7 @@ public class CoinManager : MonoBehaviour
         {
             if (coin != null)
             {
-                coin.transform.position += Vector3.up * Mathf.Sin(Time.time) * 0.1f;
+                coin.transform.position += Vector3.up * Mathf.Sin(Time.time) * 0.02f;
             }
         }
     }
@@ -70,6 +70,7 @@ public class CoinManager : MonoBehaviour
     public void CollectCoin(GameObject coin)
     {
         coinCount++;
+        coinText.text = coinCount.ToString();
         coins.Remove(coin);
         Destroy(coin);
     }

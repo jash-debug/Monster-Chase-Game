@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3738144899366548077}
   m_Layer: 0
   m_Name: Collectables_15
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
